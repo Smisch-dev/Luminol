@@ -1,1 +1,1 @@
-complete odspodu po resources views
+complete odspodu resources
