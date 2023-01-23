@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Contracts\Http;
+namespace Luminol\Contracts\Http;
 
 interface ClientPermissionsRequest
 {

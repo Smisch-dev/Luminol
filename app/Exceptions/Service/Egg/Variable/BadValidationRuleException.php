@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Egg\Variable;
+namespace Luminol\Exceptions\Service\Egg\Variable;
 
-use Pterodactyl\Exceptions\DisplayException;
+use Luminol\Exceptions\DisplayException;
 
 class BadValidationRuleException extends DisplayException
 {

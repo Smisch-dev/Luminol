@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Http\Middleware;
+namespace Luminol\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
@@ -20,7 +20,7 @@ class MaintenanceMiddleware
      */
     public function handle(Request $request, Closure $next): mixed
     {
-        /** @var \Pterodactyl\Models\Server $server */
+        /** @var \Luminol\Models\Server $server */
         $server = $request->attributes->get('server');
         $node = $server->getRelation('node');
 

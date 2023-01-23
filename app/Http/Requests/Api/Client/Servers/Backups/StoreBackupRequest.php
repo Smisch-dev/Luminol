@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Client\Servers\Backups;
+namespace Luminol\Http\Requests\Api\Client\Servers\Backups;
 
-use Pterodactyl\Models\Permission;
-use Pterodactyl\Http\Requests\Api\Client\ClientApiRequest;
+use Luminol\Models\Permission;
+use Luminol\Http\Requests\Api\Client\ClientApiRequest;
 
 class StoreBackupRequest extends ClientApiRequest
 {

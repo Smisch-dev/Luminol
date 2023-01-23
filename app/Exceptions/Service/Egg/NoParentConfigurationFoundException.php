@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Egg;
+namespace Luminol\Exceptions\Service\Egg;
 
-use Pterodactyl\Exceptions\DisplayException;
+use Luminol\Exceptions\DisplayException;
 
 class NoParentConfigurationFoundException extends DisplayException
 {

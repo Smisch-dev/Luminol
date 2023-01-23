@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Services\Acl\Api;
+namespace Luminol\Services\Acl\Api;
 
 use ReflectionClass;
-use Pterodactyl\Models\ApiKey;
+use Luminol\Models\ApiKey;
 
 class AdminAcl
 {

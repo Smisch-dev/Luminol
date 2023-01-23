@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Node;
+namespace Luminol\Exceptions\Service\Node;
 
-use Pterodactyl\Exceptions\DisplayException;
+use Luminol\Exceptions\DisplayException;
 
 class ConfigurationNotPersistedException extends DisplayException
 {

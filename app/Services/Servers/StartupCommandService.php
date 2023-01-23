@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Services\Servers;
+namespace Luminol\Services\Servers;
 
-use Pterodactyl\Models\Server;
+use Luminol\Models\Server;
 
 class StartupCommandService
 {

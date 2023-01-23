@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Luminol\Transformers\Api\Client;
 
-use Pterodactyl\Models\Allocation;
+use Luminol\Models\Allocation;
 
 class AllocationTransformer extends BaseClientTransformer
 {

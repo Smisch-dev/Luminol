@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Admin;
+namespace Luminol\Http\Requests\Admin;
 
-use Pterodactyl\Models\Location;
+use Luminol\Models\Location;
 
 class LocationFormRequest extends AdminFormRequest
 {

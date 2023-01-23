@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Extensions\Backups;
+namespace Luminol\Extensions\Backups;
 
 use Closure;
 use Aws\S3\S3Client;
@@ -10,7 +10,7 @@ use Webmozart\Assert\Assert;
 use InvalidArgumentException;
 use Illuminate\Foundation\Application;
 use League\Flysystem\FilesystemAdapter;
-use Pterodactyl\Extensions\Filesystem\S3Filesystem;
+use Luminol\Extensions\Filesystem\S3Filesystem;
 use League\Flysystem\InMemory\InMemoryFilesystemAdapter;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 

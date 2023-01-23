@@ -1,17 +1,17 @@
 <?php
 
-namespace Pterodactyl\Services\Subusers;
+namespace Luminol\Services\Subusers;
 
 use Illuminate\Support\Str;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Subuser;
+use Luminol\Models\Server;
+use Luminol\Models\Subuser;
 use Illuminate\Database\ConnectionInterface;
-use Pterodactyl\Services\Users\UserCreationService;
-use Pterodactyl\Repositories\Eloquent\SubuserRepository;
-use Pterodactyl\Contracts\Repository\UserRepositoryInterface;
-use Pterodactyl\Exceptions\Repository\RecordNotFoundException;
-use Pterodactyl\Exceptions\Service\Subuser\UserIsServerOwnerException;
-use Pterodactyl\Exceptions\Service\Subuser\ServerSubuserExistsException;
+use Luminol\Services\Users\UserCreationService;
+use Luminol\Repositories\Eloquent\SubuserRepository;
+use Luminol\Contracts\Repository\UserRepositoryInterface;
+use Luminol\Exceptions\Repository\RecordNotFoundException;
+use Luminol\Exceptions\Service\Subuser\UserIsServerOwnerException;
+use Luminol\Exceptions\Service\Subuser\ServerSubuserExistsException;
 
 class SubuserCreationService
 {
@@ -31,9 +31,9 @@ class SubuserCreationService
      * If the email address already belongs to a user on the system a new user will not
      * be created.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Service\Subuser\ServerSubuserExistsException
-     * @throws \Pterodactyl\Exceptions\Service\Subuser\UserIsServerOwnerException
+     * @throws \Luminol\Exceptions\Model\DataValidationException
+     * @throws \Luminol\Exceptions\Service\Subuser\ServerSubuserExistsException
+     * @throws \Luminol\Exceptions\Service\Subuser\UserIsServerOwnerException
      * @throws \Throwable
      */
     public function handle(Server $server, string $email, array $permissions): Subuser

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Admin;
+namespace Luminol\Http\Requests\Admin;
 
-use Pterodactyl\Models\User;
+use Luminol\Models\User;
 use Illuminate\Support\Collection;
 
 class NewUserFormRequest extends AdminFormRequest

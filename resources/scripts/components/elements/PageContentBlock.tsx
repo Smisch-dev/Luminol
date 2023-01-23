@@ -28,13 +28,13 @@ const PageContentBlock: React.FC<PageContentBlockProps> = ({ title, showFlashKey
                     <p css={tw`text-center text-neutral-500 text-xs`}>
                         <a
                             rel={'noopener nofollow noreferrer'}
-                            href={'https://pterodactyl.io'}
+                            href={'https://www.smisch.sk'}
                             target={'_blank'}
                             css={tw`no-underline text-neutral-500 hover:text-neutral-300`}
                         >
-                            Pterodactyl&reg;
+                            Smisch Development&reg;
                         </a>
-                        &nbsp;&copy; 2015 - {new Date().getFullYear()}
+                        &nbsp;&copy; 2020 - {new Date().getFullYear()}
                     </p>
                 </ContentContainer>
             </>

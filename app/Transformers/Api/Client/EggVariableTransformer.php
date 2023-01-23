@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Luminol\Transformers\Api\Client;
 
 use BadMethodCallException;
-use Pterodactyl\Models\EggVariable;
+use Luminol\Models\EggVariable;
 
 class EggVariableTransformer extends BaseClientTransformer
 {

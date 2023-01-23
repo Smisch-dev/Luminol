@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Repositories\Eloquent;
+namespace Luminol\Repositories\Eloquent;
 
-use Pterodactyl\Models\RecoveryToken;
+use Luminol\Models\RecoveryToken;
 
 class RecoveryTokenRepository extends EloquentRepository
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Luminol\Transformers\Api\Client;
 
-use Pterodactyl\Models\ApiKey;
+use Luminol\Models\ApiKey;
 
 class ApiKeyTransformer extends BaseClientTransformer
 {

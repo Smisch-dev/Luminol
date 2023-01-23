@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Remote;
+namespace Luminol\Http\Requests\Api\Remote;
 
 use Illuminate\Support\Collection;
 use Illuminate\Foundation\Http\FormRequest;

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Traits\Controllers;
+namespace Luminol\Traits\Controllers;
 
 use JavaScript;
 use Illuminate\Http\Request;

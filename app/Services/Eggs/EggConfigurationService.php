@@ -1,11 +1,11 @@
 <?php
 
-namespace Pterodactyl\Services\Eggs;
+namespace Luminol\Services\Eggs;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Str;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Services\Servers\ServerConfigurationStructureService;
+use Luminol\Models\Server;
+use Luminol\Services\Servers\ServerConfigurationStructureService;
 
 class EggConfigurationService
 {
@@ -91,8 +91,6 @@ class EggConfigurationService
             // or other JSON data for the egg. This should probably be blocked at the time
             // of egg creation/update, but it isn't so this check will at least prevent a
             // 500 error which would crash the entire Wings boot process.
-            //
-            // @see https://github.com/pterodactyl/panel/issues/3055
             if (!is_object($data) || !isset($data->find)) {
                 continue;
             }

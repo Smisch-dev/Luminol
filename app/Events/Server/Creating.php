@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Events\Server;
+namespace Luminol\Events\Server;
 
-use Pterodactyl\Events\Event;
-use Pterodactyl\Models\Server;
+use Luminol\Events\Event;
+use Luminol\Models\Server;
 use Illuminate\Queue\SerializesModels;
 
 class Creating extends Event

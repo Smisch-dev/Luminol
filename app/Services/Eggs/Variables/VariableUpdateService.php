@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Services\Eggs\Variables;
+namespace Luminol\Services\Eggs\Variables;
 
 use Illuminate\Support\Str;
-use Pterodactyl\Models\EggVariable;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Traits\Services\ValidatesValidationRules;
+use Luminol\Models\EggVariable;
+use Luminol\Exceptions\DisplayException;
+use Luminol\Traits\Services\ValidatesValidationRules;
 use Illuminate\Contracts\Validation\Factory as ValidationFactory;
-use Pterodactyl\Contracts\Repository\EggVariableRepositoryInterface;
-use Pterodactyl\Exceptions\Service\Egg\Variable\ReservedVariableNameException;
+use Luminol\Contracts\Repository\EggVariableRepositoryInterface;
+use Luminol\Exceptions\Service\Egg\Variable\ReservedVariableNameException;
 
 class VariableUpdateService
 {
@@ -33,10 +33,10 @@ class VariableUpdateService
     /**
      * Update a specific egg variable.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
-     * @throws \Pterodactyl\Exceptions\Service\Egg\Variable\ReservedVariableNameException
+     * @throws \Luminol\Exceptions\DisplayException
+     * @throws \Luminol\Exceptions\Model\DataValidationException
+     * @throws \Luminol\Exceptions\Repository\RecordNotFoundException
+     * @throws \Luminol\Exceptions\Service\Egg\Variable\ReservedVariableNameException
      */
     public function handle(EggVariable $variable, array $data): mixed
     {

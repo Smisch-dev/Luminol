@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Traits\Services;
+namespace Luminol\Traits\Services;
 
 trait ReturnsUpdatedModels
 {

@@ -1,19 +1,19 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Application\Servers;
+namespace Luminol\Http\Controllers\Api\Application\Servers;
 
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Database;
+use Luminol\Models\Server;
+use Luminol\Models\Database;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Services\Databases\DatabasePasswordService;
-use Pterodactyl\Services\Databases\DatabaseManagementService;
-use Pterodactyl\Transformers\Api\Application\ServerDatabaseTransformer;
-use Pterodactyl\Http\Controllers\Api\Application\ApplicationApiController;
-use Pterodactyl\Http\Requests\Api\Application\Servers\Databases\GetServerDatabaseRequest;
-use Pterodactyl\Http\Requests\Api\Application\Servers\Databases\GetServerDatabasesRequest;
-use Pterodactyl\Http\Requests\Api\Application\Servers\Databases\ServerDatabaseWriteRequest;
-use Pterodactyl\Http\Requests\Api\Application\Servers\Databases\StoreServerDatabaseRequest;
+use Luminol\Services\Databases\DatabasePasswordService;
+use Luminol\Services\Databases\DatabaseManagementService;
+use Luminol\Transformers\Api\Application\ServerDatabaseTransformer;
+use Luminol\Http\Controllers\Api\Application\ApplicationApiController;
+use Luminol\Http\Requests\Api\Application\Servers\Databases\GetServerDatabaseRequest;
+use Luminol\Http\Requests\Api\Application\Servers\Databases\GetServerDatabasesRequest;
+use Luminol\Http\Requests\Api\Application\Servers\Databases\ServerDatabaseWriteRequest;
+use Luminol\Http\Requests\Api\Application\Servers\Databases\StoreServerDatabaseRequest;
 
 class DatabaseController extends ApplicationApiController
 {

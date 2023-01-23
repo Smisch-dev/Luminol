@@ -1,15 +1,15 @@
 <?php
 
-namespace Pterodactyl\Providers;
+namespace Luminol\Providers;
 
 use Illuminate\Http\Request;
-use Pterodactyl\Models\Database;
+use Luminol\Models\Database;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Support\Facades\RateLimiter;
-use Pterodactyl\Http\Middleware\TrimStrings;
-use Pterodactyl\Http\Middleware\AdminAuthenticate;
-use Pterodactyl\Http\Middleware\RequireTwoFactorAuthentication;
+use Luminol\Http\Middleware\TrimStrings;
+use Luminol\Http\Middleware\AdminAuthenticate;
+use Luminol\Http\Middleware\RequireTwoFactorAuthentication;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider

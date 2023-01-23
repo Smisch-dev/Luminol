@@ -1,42 +1,42 @@
 <?php
 
-namespace Pterodactyl\Providers;
+namespace Luminol\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Pterodactyl\Repositories\Eloquent\EggRepository;
-use Pterodactyl\Repositories\Eloquent\NestRepository;
-use Pterodactyl\Repositories\Eloquent\NodeRepository;
-use Pterodactyl\Repositories\Eloquent\TaskRepository;
-use Pterodactyl\Repositories\Eloquent\UserRepository;
-use Pterodactyl\Repositories\Eloquent\ApiKeyRepository;
-use Pterodactyl\Repositories\Eloquent\ServerRepository;
-use Pterodactyl\Repositories\Eloquent\SessionRepository;
-use Pterodactyl\Repositories\Eloquent\SubuserRepository;
-use Pterodactyl\Repositories\Eloquent\DatabaseRepository;
-use Pterodactyl\Repositories\Eloquent\LocationRepository;
-use Pterodactyl\Repositories\Eloquent\ScheduleRepository;
-use Pterodactyl\Repositories\Eloquent\SettingsRepository;
-use Pterodactyl\Repositories\Eloquent\AllocationRepository;
-use Pterodactyl\Contracts\Repository\EggRepositoryInterface;
-use Pterodactyl\Repositories\Eloquent\EggVariableRepository;
-use Pterodactyl\Contracts\Repository\NestRepositoryInterface;
-use Pterodactyl\Contracts\Repository\NodeRepositoryInterface;
-use Pterodactyl\Contracts\Repository\TaskRepositoryInterface;
-use Pterodactyl\Contracts\Repository\UserRepositoryInterface;
-use Pterodactyl\Repositories\Eloquent\DatabaseHostRepository;
-use Pterodactyl\Contracts\Repository\ApiKeyRepositoryInterface;
-use Pterodactyl\Contracts\Repository\ServerRepositoryInterface;
-use Pterodactyl\Repositories\Eloquent\ServerVariableRepository;
-use Pterodactyl\Contracts\Repository\SessionRepositoryInterface;
-use Pterodactyl\Contracts\Repository\SubuserRepositoryInterface;
-use Pterodactyl\Contracts\Repository\DatabaseRepositoryInterface;
-use Pterodactyl\Contracts\Repository\LocationRepositoryInterface;
-use Pterodactyl\Contracts\Repository\ScheduleRepositoryInterface;
-use Pterodactyl\Contracts\Repository\SettingsRepositoryInterface;
-use Pterodactyl\Contracts\Repository\AllocationRepositoryInterface;
-use Pterodactyl\Contracts\Repository\EggVariableRepositoryInterface;
-use Pterodactyl\Contracts\Repository\DatabaseHostRepositoryInterface;
-use Pterodactyl\Contracts\Repository\ServerVariableRepositoryInterface;
+use Luminol\Repositories\Eloquent\EggRepository;
+use Luminol\Repositories\Eloquent\NestRepository;
+use Luminol\Repositories\Eloquent\NodeRepository;
+use Luminol\Repositories\Eloquent\TaskRepository;
+use Luminol\Repositories\Eloquent\UserRepository;
+use Luminol\Repositories\Eloquent\ApiKeyRepository;
+use Luminol\Repositories\Eloquent\ServerRepository;
+use Luminol\Repositories\Eloquent\SessionRepository;
+use Luminol\Repositories\Eloquent\SubuserRepository;
+use Luminol\Repositories\Eloquent\DatabaseRepository;
+use Luminol\Repositories\Eloquent\LocationRepository;
+use Luminol\Repositories\Eloquent\ScheduleRepository;
+use Luminol\Repositories\Eloquent\SettingsRepository;
+use Luminol\Repositories\Eloquent\AllocationRepository;
+use Luminol\Contracts\Repository\EggRepositoryInterface;
+use Luminol\Repositories\Eloquent\EggVariableRepository;
+use Luminol\Contracts\Repository\NestRepositoryInterface;
+use Luminol\Contracts\Repository\NodeRepositoryInterface;
+use Luminol\Contracts\Repository\TaskRepositoryInterface;
+use Luminol\Contracts\Repository\UserRepositoryInterface;
+use Luminol\Repositories\Eloquent\DatabaseHostRepository;
+use Luminol\Contracts\Repository\ApiKeyRepositoryInterface;
+use Luminol\Contracts\Repository\ServerRepositoryInterface;
+use Luminol\Repositories\Eloquent\ServerVariableRepository;
+use Luminol\Contracts\Repository\SessionRepositoryInterface;
+use Luminol\Contracts\Repository\SubuserRepositoryInterface;
+use Luminol\Contracts\Repository\DatabaseRepositoryInterface;
+use Luminol\Contracts\Repository\LocationRepositoryInterface;
+use Luminol\Contracts\Repository\ScheduleRepositoryInterface;
+use Luminol\Contracts\Repository\SettingsRepositoryInterface;
+use Luminol\Contracts\Repository\AllocationRepositoryInterface;
+use Luminol\Contracts\Repository\EggVariableRepositoryInterface;
+use Luminol\Contracts\Repository\DatabaseHostRepositoryInterface;
+use Luminol\Contracts\Repository\ServerVariableRepositoryInterface;
 
 class RepositoryServiceProvider extends ServiceProvider
 {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Luminol\Transformers\Api\Client;
 
-use Pterodactyl\Models\User;
+use Luminol\Models\User;
 
 class AccountTransformer extends BaseClientTransformer
 {

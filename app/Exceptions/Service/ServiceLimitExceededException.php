@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service;
+namespace Luminol\Exceptions\Service;
 
 use Throwable;
-use Pterodactyl\Exceptions\DisplayException;
+use Luminol\Exceptions\DisplayException;
 
 class ServiceLimitExceededException extends DisplayException
 {

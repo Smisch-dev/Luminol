@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Repository;
+namespace Luminol\Exceptions\Repository;
 
-use Pterodactyl\Exceptions\PterodactylException;
+use Luminol\Exceptions\LuminolException;
 
-class RepositoryException extends PterodactylException
+class RepositoryException extends LuminolException
 {
 }

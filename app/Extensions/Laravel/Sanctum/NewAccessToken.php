@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Extensions\Laravel\Sanctum;
+namespace Luminol\Extensions\Laravel\Sanctum;
 
-use Pterodactyl\Models\ApiKey;
+use Luminol\Models\ApiKey;
 use Laravel\Sanctum\NewAccessToken as SanctumAccessToken;
 
 /**
- * @property \Pterodactyl\Models\ApiKey $accessToken
+ * @property \Luminol\Models\ApiKey $accessToken
  */
 class NewAccessToken extends SanctumAccessToken
 {

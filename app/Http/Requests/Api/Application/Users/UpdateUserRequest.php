@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Users;
+namespace Luminol\Http\Requests\Api\Application\Users;
 
-use Pterodactyl\Models\User;
+use Luminol\Models\User;
 
 class UpdateUserRequest extends StoreUserRequest
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Services\Users;
+namespace Luminol\Services\Users;
 
-use Pterodactyl\Models\User;
-use Pterodactyl\Exceptions\DisplayException;
+use Luminol\Models\User;
+use Luminol\Exceptions\DisplayException;
 use Illuminate\Contracts\Translation\Translator;
-use Pterodactyl\Contracts\Repository\UserRepositoryInterface;
-use Pterodactyl\Contracts\Repository\ServerRepositoryInterface;
+use Luminol\Contracts\Repository\UserRepositoryInterface;
+use Luminol\Contracts\Repository\ServerRepositoryInterface;
 
 class UserDeletionService
 {
@@ -23,7 +23,7 @@ class UserDeletionService
     /**
      * Delete a user from the panel only if they have no servers attached to their account.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
+     * @throws \Luminol\Exceptions\DisplayException
      */
     public function handle(int|User $user): ?bool
     {

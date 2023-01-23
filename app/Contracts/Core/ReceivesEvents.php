@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Contracts\Core;
+namespace Luminol\Contracts\Core;
 
-use Pterodactyl\Events\Event;
+use Luminol\Events\Event;
 
 interface ReceivesEvents
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Services\Nodes;
+namespace Luminol\Services\Nodes;
 
-use Pterodactyl\Models\Node;
+use Luminol\Models\Node;
 use Illuminate\Contracts\Translation\Translator;
-use Pterodactyl\Contracts\Repository\NodeRepositoryInterface;
-use Pterodactyl\Exceptions\Service\HasActiveServersException;
-use Pterodactyl\Contracts\Repository\ServerRepositoryInterface;
+use Luminol\Contracts\Repository\NodeRepositoryInterface;
+use Luminol\Exceptions\Service\HasActiveServersException;
+use Luminol\Contracts\Repository\ServerRepositoryInterface;
 
 class NodeDeletionService
 {
@@ -23,7 +23,7 @@ class NodeDeletionService
     /**
      * Delete a node from the panel if no servers are attached to it.
      *
-     * @throws \Pterodactyl\Exceptions\Service\HasActiveServersException
+     * @throws \Luminol\Exceptions\Service\HasActiveServersException
      */
     public function handle(int|Node $node): int
     {

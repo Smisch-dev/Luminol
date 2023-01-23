@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Observers;
+namespace Luminol\Observers;
 
-use Pterodactyl\Models\EggVariable;
+use Luminol\Models\EggVariable;
 
 class EggVariableObserver
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Contracts\Repository;
+namespace Luminol\Contracts\Repository;
 
 interface ApiPermissionRepositoryInterface extends RepositoryInterface
 {

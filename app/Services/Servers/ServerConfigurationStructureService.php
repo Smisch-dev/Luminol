@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Services\Servers;
+namespace Luminol\Services\Servers;
 
-use Pterodactyl\Models\Mount;
-use Pterodactyl\Models\Server;
+use Luminol\Models\Mount;
+use Luminol\Models\Server;
 
 class ServerConfigurationStructureService
 {

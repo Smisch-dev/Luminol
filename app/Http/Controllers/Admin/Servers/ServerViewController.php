@@ -1,23 +1,23 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Admin\Servers;
+namespace Luminol\Http\Controllers\Admin\Servers;
 
 use JavaScript;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
-use Pterodactyl\Models\Nest;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Http\Controllers\Controller;
-use Pterodactyl\Services\Servers\EnvironmentService;
+use Luminol\Models\Nest;
+use Luminol\Models\Server;
+use Luminol\Exceptions\DisplayException;
+use Luminol\Http\Controllers\Controller;
+use Luminol\Services\Servers\EnvironmentService;
 use Illuminate\Contracts\View\Factory as ViewFactory;
-use Pterodactyl\Repositories\Eloquent\NestRepository;
-use Pterodactyl\Repositories\Eloquent\NodeRepository;
-use Pterodactyl\Repositories\Eloquent\MountRepository;
-use Pterodactyl\Repositories\Eloquent\ServerRepository;
-use Pterodactyl\Traits\Controllers\JavascriptInjection;
-use Pterodactyl\Repositories\Eloquent\LocationRepository;
-use Pterodactyl\Repositories\Eloquent\DatabaseHostRepository;
+use Luminol\Repositories\Eloquent\NestRepository;
+use Luminol\Repositories\Eloquent\NodeRepository;
+use Luminol\Repositories\Eloquent\MountRepository;
+use Luminol\Repositories\Eloquent\ServerRepository;
+use Luminol\Traits\Controllers\JavascriptInjection;
+use Luminol\Repositories\Eloquent\LocationRepository;
+use Luminol\Repositories\Eloquent\DatabaseHostRepository;
 
 class ServerViewController extends Controller
 {
@@ -71,7 +71,7 @@ class ServerViewController extends Controller
     /**
      * Returns the server startup management page.
      *
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Luminol\Exceptions\Repository\RecordNotFoundException
      */
     public function startup(Request $request, Server $server): View
     {
@@ -119,7 +119,7 @@ class ServerViewController extends Controller
      * Returns the base server management page, or an exception if the server
      * is in a state that cannot be recovered from.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
+     * @throws \Luminol\Exceptions\DisplayException
      */
     public function manage(Request $request, Server $server): View
     {

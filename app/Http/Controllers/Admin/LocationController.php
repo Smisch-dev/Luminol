@@ -1,19 +1,19 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Admin;
+namespace Luminol\Http\Controllers\Admin;
 
 use Illuminate\View\View;
-use Pterodactyl\Models\Location;
+use Luminol\Models\Location;
 use Illuminate\Http\RedirectResponse;
 use Prologue\Alerts\AlertsMessageBag;
 use Illuminate\View\Factory as ViewFactory;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Http\Controllers\Controller;
-use Pterodactyl\Http\Requests\Admin\LocationFormRequest;
-use Pterodactyl\Services\Locations\LocationUpdateService;
-use Pterodactyl\Services\Locations\LocationCreationService;
-use Pterodactyl\Services\Locations\LocationDeletionService;
-use Pterodactyl\Contracts\Repository\LocationRepositoryInterface;
+use Luminol\Exceptions\DisplayException;
+use Luminol\Http\Controllers\Controller;
+use Luminol\Http\Requests\Admin\LocationFormRequest;
+use Luminol\Services\Locations\LocationUpdateService;
+use Luminol\Services\Locations\LocationCreationService;
+use Luminol\Services\Locations\LocationDeletionService;
+use Luminol\Contracts\Repository\LocationRepositoryInterface;
 
 class LocationController extends Controller
 {
@@ -43,7 +43,7 @@ class LocationController extends Controller
     /**
      * Return the location view page.
      *
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Luminol\Exceptions\Repository\RecordNotFoundException
      */
     public function view(int $id): View
     {
@@ -86,7 +86,7 @@ class LocationController extends Controller
      * Delete a location from the system.
      *
      * @throws \Exception
-     * @throws \Pterodactyl\Exceptions\DisplayException
+     * @throws \Luminol\Exceptions\DisplayException
      */
     public function delete(Location $location): RedirectResponse
     {

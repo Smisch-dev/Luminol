@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Models;
+namespace Luminol\Models;
 
 /**
- * Pterodactyl\Models\Setting.
+ * Luminol\Models\Setting.
  *
  * @property int $id
  * @property string $key

@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Services\Api;
+namespace Luminol\Services\Api;
 
-use Pterodactyl\Models\ApiKey;
+use Luminol\Models\ApiKey;
 use Illuminate\Contracts\Encryption\Encrypter;
-use Pterodactyl\Contracts\Repository\ApiKeyRepositoryInterface;
+use Luminol\Contracts\Repository\ApiKeyRepositoryInterface;
 
 class KeyCreationService
 {
@@ -33,7 +33,7 @@ class KeyCreationService
      * This will automatically generate an identifier and an encrypted token that are
      * stored in the database.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
+     * @throws \Luminol\Exceptions\Model\DataValidationException
      */
     public function handle(array $data, array $permissions = []): ApiKey
     {

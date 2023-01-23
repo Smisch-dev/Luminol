@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Admin\Egg;
+namespace Luminol\Http\Requests\Admin\Egg;
 
-use Pterodactyl\Models\EggVariable;
-use Pterodactyl\Http\Requests\Admin\AdminFormRequest;
+use Luminol\Models\EggVariable;
+use Luminol\Http\Requests\Admin\AdminFormRequest;
 
 class EggVariableFormRequest extends AdminFormRequest
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Models\Filters;
+namespace Luminol\Models\Filters;
 
 use BadMethodCallException;
 use Illuminate\Support\Str;

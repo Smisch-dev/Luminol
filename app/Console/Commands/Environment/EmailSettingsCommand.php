@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Console\Commands\Environment;
+namespace Luminol\Console\Commands\Environment;
 
 use Illuminate\Console\Command;
-use Pterodactyl\Traits\Commands\EnvironmentWriterTrait;
+use Luminol\Traits\Commands\EnvironmentWriterTrait;
 use Illuminate\Contracts\Config\Repository as ConfigRepository;
 
 class EmailSettingsCommand extends Command
@@ -36,7 +36,7 @@ class EmailSettingsCommand extends Command
     /**
      * Handle command execution.
      *
-     * @throws \Pterodactyl\Exceptions\PterodactylException
+     * @throws \Luminol\Exceptions\LuminolException
      */
     public function handle()
     {

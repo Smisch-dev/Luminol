@@ -1,22 +1,22 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Client\Servers;
+namespace Luminol\Http\Controllers\Api\Client\Servers;
 
-use Pterodactyl\Models\Task;
+use Luminol\Models\Task;
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Schedule;
+use Luminol\Models\Server;
+use Luminol\Models\Schedule;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Facades\Activity;
-use Pterodactyl\Models\Permission;
-use Pterodactyl\Repositories\Eloquent\TaskRepository;
-use Pterodactyl\Exceptions\Http\HttpForbiddenException;
-use Pterodactyl\Transformers\Api\Client\TaskTransformer;
-use Pterodactyl\Http\Requests\Api\Client\ClientApiRequest;
-use Pterodactyl\Http\Controllers\Api\Client\ClientApiController;
-use Pterodactyl\Exceptions\Service\ServiceLimitExceededException;
+use Luminol\Facades\Activity;
+use Luminol\Models\Permission;
+use Luminol\Repositories\Eloquent\TaskRepository;
+use Luminol\Exceptions\Http\HttpForbiddenException;
+use Luminol\Transformers\Api\Client\TaskTransformer;
+use Luminol\Http\Requests\Api\Client\ClientApiRequest;
+use Luminol\Http\Controllers\Api\Client\ClientApiController;
+use Luminol\Exceptions\Service\ServiceLimitExceededException;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Schedules\StoreTaskRequest;
+use Luminol\Http\Requests\Api\Client\Servers\Schedules\StoreTaskRequest;
 
 class ScheduleTaskController extends ClientApiController
 {
@@ -31,12 +31,12 @@ class ScheduleTaskController extends ClientApiController
     /**
      * Create a new task for a given schedule and store it in the database.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Service\ServiceLimitExceededException
+     * @throws \Luminol\Exceptions\Model\DataValidationException
+     * @throws \Luminol\Exceptions\Service\ServiceLimitExceededException
      */
     public function store(StoreTaskRequest $request, Server $server, Schedule $schedule): array
     {
-        $limit = config('pterodactyl.client_features.schedules.per_schedule_task_limit', 10);
+        $limit = config('luminol.client_features.schedules.per_schedule_task_limit', 10);
         if ($schedule->tasks()->count() >= $limit) {
             throw new ServiceLimitExceededException("Schedules may not have more than $limit tasks associated with them. Creating this task would put this schedule over the limit.");
         }
@@ -45,10 +45,10 @@ class ScheduleTaskController extends ClientApiController
             throw new HttpForbiddenException("A backup task cannot be created when the server's backup limit is set to 0.");
         }
 
-        /** @var \Pterodactyl\Models\Task|null $lastTask */
+        /** @var \Luminol\Models\Task|null $lastTask */
         $lastTask = $schedule->tasks()->orderByDesc('sequence_id')->first();
 
-        /** @var \Pterodactyl\Models\Task $task */
+        /** @var \Luminol\Models\Task $task */
         $task = $this->repository->create([
             'schedule_id' => $schedule->id,
             'sequence_id' => ($lastTask->sequence_id ?? 0) + 1,
@@ -71,8 +71,8 @@ class ScheduleTaskController extends ClientApiController
     /**
      * Updates a given task for a server.
      *
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Luminol\Exceptions\Model\DataValidationException
+     * @throws \Luminol\Exceptions\Repository\RecordNotFoundException
      */
     public function update(StoreTaskRequest $request, Server $server, Schedule $schedule, Task $task): array
     {

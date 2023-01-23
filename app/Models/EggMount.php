@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Models;
+namespace Luminol\Models;
 
 class EggMount extends Model
 {

@@ -1,12 +1,12 @@
 <?php
 
-namespace Pterodactyl\Services\Deployment;
+namespace Luminol\Services\Deployment;
 
-use Pterodactyl\Models\Allocation;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Services\Allocations\AssignmentService;
-use Pterodactyl\Contracts\Repository\AllocationRepositoryInterface;
-use Pterodactyl\Exceptions\Service\Deployment\NoViableAllocationException;
+use Luminol\Models\Allocation;
+use Luminol\Exceptions\DisplayException;
+use Luminol\Services\Allocations\AssignmentService;
+use Luminol\Contracts\Repository\AllocationRepositoryInterface;
+use Luminol\Exceptions\Service\Deployment\NoViableAllocationException;
 
 class AllocationSelectionService
 {
@@ -51,7 +51,7 @@ class AllocationSelectionService
      * empty, all ports will be considered when finding an allocation. If set, only ports appearing
      * in the array or range will be used.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
+     * @throws \Luminol\Exceptions\DisplayException
      */
     public function setPorts(array $ports): self
     {
@@ -80,7 +80,7 @@ class AllocationSelectionService
     /**
      * Return a single allocation that should be used as the default allocation for a server.
      *
-     * @throws \Pterodactyl\Exceptions\Service\Deployment\NoViableAllocationException
+     * @throws \Luminol\Exceptions\Service\Deployment\NoViableAllocationException
      */
     public function handle(): Allocation
     {

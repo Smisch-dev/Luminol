@@ -1,19 +1,19 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Remote;
+namespace Luminol\Http\Controllers\Api\Remote;
 
 use Exception;
 use Carbon\Carbon;
 use DateTimeInterface;
 use Illuminate\Support\Str;
-use Pterodactyl\Models\User;
+use Luminol\Models\User;
 use Webmozart\Assert\Assert;
-use Pterodactyl\Models\Server;
+use Luminol\Models\Server;
 use Illuminate\Support\Facades\Log;
-use Pterodactyl\Models\ActivityLog;
-use Pterodactyl\Models\ActivityLogSubject;
-use Pterodactyl\Http\Controllers\Controller;
-use Pterodactyl\Http\Requests\Api\Remote\ActivityEventRequest;
+use Luminol\Models\ActivityLog;
+use Luminol\Models\ActivityLogSubject;
+use Luminol\Http\Controllers\Controller;
+use Luminol\Http\Requests\Api\Remote\ActivityEventRequest;
 
 class ActivityProcessingController extends Controller
 {
@@ -21,7 +21,7 @@ class ActivityProcessingController extends Controller
     {
         $tz = Carbon::now()->getTimezone();
 
-        /** @var \Pterodactyl\Models\Node $node */
+        /** @var \Luminol\Models\Node $node */
         $node = $request->attributes->get('node');
 
         $servers = $node->servers()->whereIn('uuid', $request->servers())->get()->keyBy('uuid');
@@ -29,7 +29,7 @@ class ActivityProcessingController extends Controller
 
         $logs = [];
         foreach ($request->input('data') as $datum) {
-            /** @var \Pterodactyl\Models\Server|null $server */
+            /** @var \Luminol\Models\Server|null $server */
             $server = $servers->get($datum['server']);
             if (is_null($server) || !Str::startsWith($datum['event'], 'server:')) {
                 continue;

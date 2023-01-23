@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Admin;
+namespace Luminol\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 

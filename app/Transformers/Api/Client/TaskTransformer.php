@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Transformers\Api\Client;
+namespace Luminol\Transformers\Api\Client;
 
-use Pterodactyl\Models\Task;
+use Luminol\Models\Task;
 
 class TaskTransformer extends BaseClientTransformer
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Users;
+namespace Luminol\Http\Requests\Api\Application\Users;
 
-use Pterodactyl\Services\Acl\Api\AdminAcl;
-use Pterodactyl\Http\Requests\Api\Application\ApplicationApiRequest;
+use Luminol\Services\Acl\Api\AdminAcl;
+use Luminol\Http\Requests\Api\Application\ApplicationApiRequest;
 
 class DeleteUserRequest extends ApplicationApiRequest
 {

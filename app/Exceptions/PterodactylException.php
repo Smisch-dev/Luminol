@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Exceptions;
+namespace Luminol\Exceptions;
 
 use Exception;
 
-class PterodactylException extends Exception
+class LuminolException extends Exception
 {
 }

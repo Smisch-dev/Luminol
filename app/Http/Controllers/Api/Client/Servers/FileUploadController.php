@@ -1,14 +1,14 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Client\Servers;
+namespace Luminol\Http\Controllers\Api\Client\Servers;
 
 use Carbon\CarbonImmutable;
-use Pterodactyl\Models\User;
-use Pterodactyl\Models\Server;
+use Luminol\Models\User;
+use Luminol\Models\Server;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Services\Nodes\NodeJWTService;
-use Pterodactyl\Http\Controllers\Api\Client\ClientApiController;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Files\UploadFileRequest;
+use Luminol\Services\Nodes\NodeJWTService;
+use Luminol\Http\Controllers\Api\Client\ClientApiController;
+use Luminol\Http\Requests\Api\Client\Servers\Files\UploadFileRequest;
 
 class FileUploadController extends ClientApiController
 {

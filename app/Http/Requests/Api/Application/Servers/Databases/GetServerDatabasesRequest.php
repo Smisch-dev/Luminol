@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Servers\Databases;
+namespace Luminol\Http\Requests\Api\Application\Servers\Databases;
 
-use Pterodactyl\Services\Acl\Api\AdminAcl;
-use Pterodactyl\Http\Requests\Api\Application\ApplicationApiRequest;
+use Luminol\Services\Acl\Api\AdminAcl;
+use Luminol\Http\Requests\Api\Application\ApplicationApiRequest;
 
 class GetServerDatabasesRequest extends ApplicationApiRequest
 {

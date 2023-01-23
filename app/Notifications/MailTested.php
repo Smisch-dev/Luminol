@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Notifications;
+namespace Luminol\Notifications;
 
-use Pterodactyl\Models\User;
+use Luminol\Models\User;
 use Illuminate\Notifications\Notification;
 use Illuminate\Notifications\Messages\MailMessage;
 
@@ -20,8 +20,8 @@ class MailTested extends Notification
     public function toMail(): MailMessage
     {
         return (new MailMessage())
-            ->subject('Pterodactyl Test Message')
+            ->subject('Luminol Test Message')
             ->greeting('Hello ' . $this->user->name . '!')
-            ->line('This is a test of the Pterodactyl mail system. You\'re good to go!');
+            ->line('This is a test of the Luminol mail system. You\'re good to go!');
     }
 }

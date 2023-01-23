@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Observers;
+namespace Luminol\Observers;
 
-use Pterodactyl\Events;
-use Pterodactyl\Models\Server;
+use Luminol\Events;
+use Luminol\Models\Server;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 
 class ServerObserver

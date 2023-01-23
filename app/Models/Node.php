@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Models;
+namespace Luminol\Models;
 
 use Illuminate\Support\Str;
 use Symfony\Component\Yaml\Yaml;
@@ -34,10 +34,10 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
  * @property string $daemonBase
  * @property \Carbon\Carbon $created_at
  * @property \Carbon\Carbon $updated_at
- * @property \Pterodactyl\Models\Location $location
- * @property \Pterodactyl\Models\Mount[]|\Illuminate\Database\Eloquent\Collection $mounts
- * @property \Pterodactyl\Models\Server[]|\Illuminate\Database\Eloquent\Collection $servers
- * @property \Pterodactyl\Models\Allocation[]|\Illuminate\Database\Eloquent\Collection $allocations
+ * @property \Luminol\Models\Location $location
+ * @property \Luminol\Models\Mount[]|\Illuminate\Database\Eloquent\Collection $mounts
+ * @property \Luminol\Models\Server[]|\Illuminate\Database\Eloquent\Collection $servers
+ * @property \Luminol\Models\Allocation[]|\Illuminate\Database\Eloquent\Collection $allocations
  */
 class Node extends Model
 {
@@ -115,7 +115,7 @@ class Node extends Model
         'behind_proxy' => false,
         'memory_overallocate' => 0,
         'disk_overallocate' => 0,
-        'daemonBase' => '/var/lib/pterodactyl/volumes',
+        'daemonBase' => '/var/lib/luminol/volumes',
         'daemonSFTP' => 2022,
         'daemonListen' => 8080,
         'maintenance_mode' => false,

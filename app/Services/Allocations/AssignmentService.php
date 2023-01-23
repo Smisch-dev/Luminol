@@ -1,17 +1,17 @@
 <?php
 
-namespace Pterodactyl\Services\Allocations;
+namespace Luminol\Services\Allocations;
 
 use Exception;
 use IPTools\Network;
-use Pterodactyl\Models\Node;
+use Luminol\Models\Node;
 use Illuminate\Database\ConnectionInterface;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Contracts\Repository\AllocationRepositoryInterface;
-use Pterodactyl\Exceptions\Service\Allocation\CidrOutOfRangeException;
-use Pterodactyl\Exceptions\Service\Allocation\PortOutOfRangeException;
-use Pterodactyl\Exceptions\Service\Allocation\InvalidPortMappingException;
-use Pterodactyl\Exceptions\Service\Allocation\TooManyPortsInRangeException;
+use Luminol\Exceptions\DisplayException;
+use Luminol\Contracts\Repository\AllocationRepositoryInterface;
+use Luminol\Exceptions\Service\Allocation\CidrOutOfRangeException;
+use Luminol\Exceptions\Service\Allocation\PortOutOfRangeException;
+use Luminol\Exceptions\Service\Allocation\InvalidPortMappingException;
+use Luminol\Exceptions\Service\Allocation\TooManyPortsInRangeException;
 
 class AssignmentService
 {
@@ -32,11 +32,11 @@ class AssignmentService
     /**
      * Insert allocations into the database and link them to a specific node.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\CidrOutOfRangeException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\InvalidPortMappingException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\PortOutOfRangeException
-     * @throws \Pterodactyl\Exceptions\Service\Allocation\TooManyPortsInRangeException
+     * @throws \Luminol\Exceptions\DisplayException
+     * @throws \Luminol\Exceptions\Service\Allocation\CidrOutOfRangeException
+     * @throws \Luminol\Exceptions\Service\Allocation\InvalidPortMappingException
+     * @throws \Luminol\Exceptions\Service\Allocation\PortOutOfRangeException
+     * @throws \Luminol\Exceptions\Service\Allocation\TooManyPortsInRangeException
      */
     public function handle(Node $node, array $data): void
     {

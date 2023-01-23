@@ -1,8 +1,8 @@
 <?php
 
-namespace Pterodactyl\Http\Requests\Api\Application\Servers;
+namespace Luminol\Http\Requests\Api\Application\Servers;
 
-use Pterodactyl\Models\Server;
+use Luminol\Models\Server;
 
 class UpdateServerDetailsRequest extends ServerWriteRequest
 {

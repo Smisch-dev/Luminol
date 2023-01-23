@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Transformer;
+namespace Luminol\Exceptions\Transformer;
 
-use Pterodactyl\Exceptions\PterodactylException;
+use Luminol\Exceptions\LuminolException;
 
-class InvalidTransformerLevelException extends PterodactylException
+class InvalidTransformerLevelException extends LuminolException
 {
 }

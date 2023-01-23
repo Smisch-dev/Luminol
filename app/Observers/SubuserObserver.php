@@ -1,11 +1,11 @@
 <?php
 
-namespace Pterodactyl\Observers;
+namespace Luminol\Observers;
 
-use Pterodactyl\Events;
-use Pterodactyl\Models\Subuser;
-use Pterodactyl\Notifications\AddedToServer;
-use Pterodactyl\Notifications\RemovedFromServer;
+use Luminol\Events;
+use Luminol\Models\Subuser;
+use Luminol\Notifications\AddedToServer;
+use Luminol\Notifications\RemovedFromServer;
 
 class SubuserObserver
 {

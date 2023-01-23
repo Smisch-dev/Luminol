@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Exceptions\Service\Database;
+namespace Luminol\Exceptions\Service\Database;
 
-use Pterodactyl\Exceptions\PterodactylException;
+use Luminol\Exceptions\LuminolException;
 
-class DatabaseClientFeatureNotEnabledException extends PterodactylException
+class DatabaseClientFeatureNotEnabledException extends LuminolException
 {
     public function __construct()
     {

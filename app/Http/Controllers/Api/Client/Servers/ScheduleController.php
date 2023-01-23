@@ -1,27 +1,27 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Client\Servers;
+namespace Luminol\Http\Controllers\Api\Client\Servers;
 
 use Exception;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use Pterodactyl\Models\Server;
-use Pterodactyl\Models\Schedule;
+use Luminol\Models\Server;
+use Luminol\Models\Schedule;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Facades\Activity;
-use Pterodactyl\Helpers\Utilities;
-use Pterodactyl\Exceptions\DisplayException;
-use Pterodactyl\Repositories\Eloquent\ScheduleRepository;
-use Pterodactyl\Services\Schedules\ProcessScheduleService;
-use Pterodactyl\Transformers\Api\Client\ScheduleTransformer;
-use Pterodactyl\Http\Controllers\Api\Client\ClientApiController;
+use Luminol\Facades\Activity;
+use Luminol\Helpers\Utilities;
+use Luminol\Exceptions\DisplayException;
+use Luminol\Repositories\Eloquent\ScheduleRepository;
+use Luminol\Services\Schedules\ProcessScheduleService;
+use Luminol\Transformers\Api\Client\ScheduleTransformer;
+use Luminol\Http\Controllers\Api\Client\ClientApiController;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Schedules\ViewScheduleRequest;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Schedules\StoreScheduleRequest;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Schedules\DeleteScheduleRequest;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Schedules\UpdateScheduleRequest;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Schedules\TriggerScheduleRequest;
+use Luminol\Http\Requests\Api\Client\Servers\Schedules\ViewScheduleRequest;
+use Luminol\Http\Requests\Api\Client\Servers\Schedules\StoreScheduleRequest;
+use Luminol\Http\Requests\Api\Client\Servers\Schedules\DeleteScheduleRequest;
+use Luminol\Http\Requests\Api\Client\Servers\Schedules\UpdateScheduleRequest;
+use Luminol\Http\Requests\Api\Client\Servers\Schedules\TriggerScheduleRequest;
 
 class ScheduleController extends ClientApiController
 {
@@ -48,12 +48,12 @@ class ScheduleController extends ClientApiController
     /**
      * Store a new schedule for a server.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
+     * @throws \Luminol\Exceptions\DisplayException
+     * @throws \Luminol\Exceptions\Model\DataValidationException
      */
     public function store(StoreScheduleRequest $request, Server $server): array
     {
-        /** @var \Pterodactyl\Models\Schedule $model */
+        /** @var \Luminol\Models\Schedule $model */
         $model = $this->repository->create([
             'server_id' => $server->id,
             'name' => $request->input('name'),
@@ -96,9 +96,9 @@ class ScheduleController extends ClientApiController
     /**
      * Updates a given schedule with the new data provided.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
-     * @throws \Pterodactyl\Exceptions\Model\DataValidationException
-     * @throws \Pterodactyl\Exceptions\Repository\RecordNotFoundException
+     * @throws \Luminol\Exceptions\DisplayException
+     * @throws \Luminol\Exceptions\Model\DataValidationException
+     * @throws \Luminol\Exceptions\Repository\RecordNotFoundException
      */
     public function update(UpdateScheduleRequest $request, Server $server, Schedule $schedule): array
     {
@@ -119,7 +119,6 @@ class ScheduleController extends ClientApiController
         // Toggle the processing state of the scheduled task when it is enabled or disabled so that an
         // invalid state can be reset without manual database intervention.
         //
-        // @see https://github.com/pterodactyl/panel/issues/2425
         if ($schedule->is_active !== $active) {
             $data['is_processing'] = false;
         }
@@ -166,7 +165,7 @@ class ScheduleController extends ClientApiController
     /**
      * Get the next run timestamp based on the cron data provided.
      *
-     * @throws \Pterodactyl\Exceptions\DisplayException
+     * @throws \Luminol\Exceptions\DisplayException
      */
     protected function getNextRunAt(Request $request): Carbon
     {

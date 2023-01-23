@@ -1,23 +1,23 @@
 <?php
 
-namespace Pterodactyl\Http\Controllers\Api\Client\Servers;
+namespace Luminol\Http\Controllers\Api\Client\Servers;
 
 use Illuminate\Http\Request;
-use Pterodactyl\Models\Backup;
-use Pterodactyl\Models\Server;
+use Luminol\Models\Backup;
+use Luminol\Models\Server;
 use Illuminate\Http\JsonResponse;
-use Pterodactyl\Facades\Activity;
-use Pterodactyl\Models\Permission;
+use Luminol\Facades\Activity;
+use Luminol\Models\Permission;
 use Illuminate\Auth\Access\AuthorizationException;
-use Pterodactyl\Services\Backups\DeleteBackupService;
-use Pterodactyl\Services\Backups\DownloadLinkService;
-use Pterodactyl\Repositories\Eloquent\BackupRepository;
-use Pterodactyl\Services\Backups\InitiateBackupService;
-use Pterodactyl\Repositories\Wings\DaemonBackupRepository;
-use Pterodactyl\Transformers\Api\Client\BackupTransformer;
-use Pterodactyl\Http\Controllers\Api\Client\ClientApiController;
+use Luminol\Services\Backups\DeleteBackupService;
+use Luminol\Services\Backups\DownloadLinkService;
+use Luminol\Repositories\Eloquent\BackupRepository;
+use Luminol\Services\Backups\InitiateBackupService;
+use Luminol\Repositories\Wings\DaemonBackupRepository;
+use Luminol\Transformers\Api\Client\BackupTransformer;
+use Luminol\Http\Controllers\Api\Client\ClientApiController;
 use Symfony\Component\HttpKernel\Exception\BadRequestHttpException;
-use Pterodactyl\Http\Requests\Api\Client\Servers\Backups\StoreBackupRequest;
+use Luminol\Http\Requests\Api\Client\Servers\Backups\StoreBackupRequest;
 
 class BackupController extends ClientApiController
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Providers;
+namespace Luminol\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use Pterodactyl\Extensions\Backups\BackupManager;
+use Luminol\Extensions\Backups\BackupManager;
 use Illuminate\Contracts\Support\DeferrableProvider;
 
 class BackupsServiceProvider extends ServiceProvider implements DeferrableProvider

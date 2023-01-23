@@ -1,9 +1,9 @@
 <?php
 
-namespace Pterodactyl\Events\Subuser;
+namespace Luminol\Events\Subuser;
 
-use Pterodactyl\Events\Event;
-use Pterodactyl\Models\Subuser;
+use Luminol\Events\Event;
+use Luminol\Models\Subuser;
 use Illuminate\Queue\SerializesModels;
 
 class Created extends Event

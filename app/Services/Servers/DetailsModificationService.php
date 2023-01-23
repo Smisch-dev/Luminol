@@ -1,13 +1,13 @@
 <?php
 
-namespace Pterodactyl\Services\Servers;
+namespace Luminol\Services\Servers;
 
 use Illuminate\Support\Arr;
-use Pterodactyl\Models\Server;
+use Luminol\Models\Server;
 use Illuminate\Database\ConnectionInterface;
-use Pterodactyl\Traits\Services\ReturnsUpdatedModels;
-use Pterodactyl\Repositories\Wings\DaemonServerRepository;
-use Pterodactyl\Exceptions\Http\Connection\DaemonConnectionException;
+use Luminol\Traits\Services\ReturnsUpdatedModels;
+use Luminol\Repositories\Wings\DaemonServerRepository;
+use Luminol\Exceptions\Http\Connection\DaemonConnectionException;
 
 class DetailsModificationService
 {

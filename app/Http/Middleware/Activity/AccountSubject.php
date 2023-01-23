@@ -1,10 +1,10 @@
 <?php
 
-namespace Pterodactyl\Http\Middleware\Activity;
+namespace Luminol\Http\Middleware\Activity;
 
 use Closure;
 use Illuminate\Http\Request;
-use Pterodactyl\Facades\LogTarget;
+use Luminol\Facades\LogTarget;
 
 class AccountSubject
 {

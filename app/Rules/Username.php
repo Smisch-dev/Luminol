@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Rules;
+namespace Luminol\Rules;
 
 use Illuminate\Contracts\Validation\Rule;
 

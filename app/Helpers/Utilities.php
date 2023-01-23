@@ -1,6 +1,6 @@
 <?php
 
-namespace Pterodactyl\Helpers;
+namespace Luminol\Helpers;
 
 use Exception;
 use Carbon\Carbon;
