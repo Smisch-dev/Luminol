@@ -1,1 +1,1 @@
-complete odspodu resources
+complete odspodu bootstrap

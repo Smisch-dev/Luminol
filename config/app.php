@@ -7,7 +7,7 @@ return [
     |--------------------------------------------------------------------------
     | Application Version
     |--------------------------------------------------------------------------
-    | This value is set when creating a Pterodactyl release. You should not
+    | This value is set when creating a Luminol release. You should not
     | change this value if you are not maintaining your own internal versions.
     */
 
@@ -23,7 +23,7 @@ return [
     | any other location as required by the application or its packages.
     */
 
-    'name' => env('APP_NAME', 'Pterodactyl'),
+    'name' => env('APP_NAME', 'Luminol'),
 
     /*
     |--------------------------------------------------------------------------
@@ -192,16 +192,16 @@ return [
         /*
          * Application Service Providers...
          */
-        Pterodactyl\Providers\ActivityLogServiceProvider::class,
-        Pterodactyl\Providers\AppServiceProvider::class,
-        Pterodactyl\Providers\AuthServiceProvider::class,
-        Pterodactyl\Providers\BackupsServiceProvider::class,
-        Pterodactyl\Providers\BladeServiceProvider::class,
-        Pterodactyl\Providers\EventServiceProvider::class,
-        Pterodactyl\Providers\HashidsServiceProvider::class,
-        Pterodactyl\Providers\RouteServiceProvider::class,
-        Pterodactyl\Providers\RepositoryServiceProvider::class,
-        Pterodactyl\Providers\ViewComposerServiceProvider::class,
+        Luminol\Providers\ActivityLogServiceProvider::class,
+        Luminol\Providers\AppServiceProvider::class,
+        Luminol\Providers\AuthServiceProvider::class,
+        Luminol\Providers\BackupsServiceProvider::class,
+        Luminol\Providers\BladeServiceProvider::class,
+        Luminol\Providers\EventServiceProvider::class,
+        Luminol\Providers\HashidsServiceProvider::class,
+        Luminol\Providers\RouteServiceProvider::class,
+        Luminol\Providers\RepositoryServiceProvider::class,
+        Luminol\Providers\ViewComposerServiceProvider::class,
 
         /*
          * Additional Dependencies
@@ -224,11 +224,11 @@ return [
         'Alert' => Prologue\Alerts\Facades\Alert::class,
         'Carbon' => Carbon\Carbon::class,
         'JavaScript' => Laracasts\Utilities\JavaScript\JavaScriptFacade::class,
-        'Theme' => Pterodactyl\Extensions\Facades\Theme::class,
+        'Theme' => Luminol\Extensions\Facades\Theme::class,
 
         // Custom Facades
-        'Activity' => Pterodactyl\Facades\Activity::class,
-        'LogBatch' => Pterodactyl\Facades\LogBatch::class,
-        'LogTarget' => Pterodactyl\Facades\LogTarget::class,
+        'Activity' => Luminol\Facades\Activity::class,
+        'LogBatch' => Luminol\Facades\LogBatch::class,
+        'LogTarget' => Luminol\Facades\LogTarget::class,
     ])->toArray(),
 ];
